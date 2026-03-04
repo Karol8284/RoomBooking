@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/Doc/">
+    <File Path="Ktruktura.txt" />
+  </Folder>
+  <Project Path="RoomBooking.API/RoomBooking.API.csproj" Id="11908fc8-e54c-499d-9944-e555912e717e" />
+  <Project Path="RoomBooking.AppHost/RoomBooking.AppHost.csproj" Id="5693e052-9e91-46f2-b66c-108a887cc8e5" />
+  <Project Path="RoomBooking.CORE/RoomBooking.CORE.csproj" Id="4d32603d-1ec9-4bee-9945-6de9b9fe682f" />
+  <Project Path="RoomBooking.HybridApp/RoomBooking.HybridApp.Shared/RoomBooking.HybridApp.Shared.csproj" Id="7d77f2d8-a7e8-44f6-ac48-389e3153ba1a" />
+  <Project Path="RoomBooking.HybridApp/RoomBooking.HybridApp.Web.Client/RoomBooking.HybridApp.Web.Client.csproj" Id="d043a6db-8356-4908-8076-f9a8608e84ad" />
+  <Project Path="RoomBooking.HybridApp/RoomBooking.HybridApp.Web/RoomBooking.HybridApp.Web.csproj" Id="2085ac0e-a1c8-4012-844b-fde2dd6bc64a" />
+  <Project Path="RoomBooking.HybridApp/RoomBooking.HybridApp/RoomBooking.HybridApp.csproj" Id="d54a0b2e-422d-450f-9ac1-829cf1071608" />
+  <Project Path="RoomBooking.Infrastructure/RoomBooking.Infrastructure.csproj" Id="c3ef05b9-567d-4518-bb70-77762dfc2cc3" />
+  <Project Path="RoomBooking.Shared/RoomBooking.Shared.csproj" Id="cd2fd4ca-1902-4910-b70a-6f6deeffe32e" />
+  <Project Path="RoomBooking.Tests/RoomBooking.Tests.csproj" Id="e3d2ffa2-68df-4eb9-b8ac-794f78d2ad92" />
+  <Project Path="RoomBooking.WebAssembly/RoomBooking.WebAssembly.csproj" Id="2ce11b4b-a8de-4132-9912-d9ce165157f6" />
+</Solution>
