@@ -1,10 +1,16 @@
-﻿using System;
+﻿using RoomBooking.CORE.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace RoomBooking.CORE.Interfaces.Repositories
 {
-    internal class IRoomRepository
+    public interface IRoomRepository
     {
+        Task<Room> GetByIdAsync(Guid id);
+        Task<IEnumerable<Room>> GetAllAsync();
+        Task AddAsync(Room room);
+        Task UpdateAsync(Room room);
+        Task DeleteAsync(Guid id);
     }
 }
