@@ -4,7 +4,11 @@ using System.Text;
 
 namespace RoomBooking.CORE.Enums
 {
-    public class RoomType
+    public enum RoomType
     {
+        Single = 0,
+         Double = 1,
+         Suite = 2,
+         Conference = 3
     }
 }

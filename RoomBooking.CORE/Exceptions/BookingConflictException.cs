@@ -4,7 +4,11 @@ using System.Text;
 
 namespace RoomBooking.CORE.Exceptions
 {
-    internal class BookingConflictException
+    public class BookingConflictException : Exception
     {
+        public BookingConflictException(Guid roomId) 
+            : base($"Room {roomId} is already booked for this period.") { }
+
+
     }
 }
