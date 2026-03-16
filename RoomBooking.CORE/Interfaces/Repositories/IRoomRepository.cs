@@ -1,8 +1,4 @@
 ﻿using RoomBooking.CORE.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace RoomBooking.CORE.Interfaces.Repositories
 {
     public interface IRoomRepository
