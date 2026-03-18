@@ -13,7 +13,7 @@ namespace RoomBooking.Infrastructure.Data.Configurations
             builder.Property(b => b.TotalPrice).HasColumnType("decimal(18,2)");
             builder.Property(b => b.StartDate).HasColumnType("date");   
             builder.Property(b => b.EndDate).HasColumnType("date");
-            builder.Property(b => b.ReservationDate).HasColumnType("datetime2");
+            builder.Property(b => b.ReservationDate).HasColumnType("timestamp");
             builder.Property(b => b.UserId).IsRequired();
             builder.HasOne(b => b.Room)
                    .WithMany(r => r.Bookings)
