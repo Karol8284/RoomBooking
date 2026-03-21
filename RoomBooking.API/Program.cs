@@ -8,6 +8,15 @@ using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowWasm", policy =>
+    policy.WithOrigins("https://localhost:7234")
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+});
+
+
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -28,6 +37,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("AllowWasm");
 app.UseAuthorization();
 app.MapControllers();
 

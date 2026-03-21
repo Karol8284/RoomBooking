@@ -1,0 +1,84 @@
+﻿@page "/booking"
+@inject HttpClient Http
+@using RoomBooking.Shared.DTOs.Bookings
+@using RoomBooking.Shared.DTOs.Rooms
+
+<MudContainer MaxWidth="MaxWidth.Small" Class="mt-6">
+    <MudText Typo="Typo.h4" GutterBottom="true">
+        Registry Room 
+    </MudText>
+    <MudCard>
+        <MudCardContent>
+            <MudSelect T="Guid" Label="Select room" @bind-Value="selectedRoomId" Class="mb-4">
+                @if(rooms != null)
+                {
+                    @foreach( var room in rooms)
+                    {
+                        <MudSelectItem Value="@room.Id">@room.Name - @room.Price PLN/night</MudSelectItem> 
+                    }
+                }
+            </MudSelect>
+            <MudDatePicker Label="Date start" @bind-Date="startDate" Class="mb-4"/>
+            <MudDatePicker Label="Date end" @bind-Date="endDate" Class="mb-4"/>
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="BookRoom" FullWidth="true">
+                Reserve 
+            </MudButton>
+        </MudCardActions>
+    </MudCard>
+
+    @if(message != null)
+    {
+        <MudAlert Severity="@severity" Class="mt-4">@message</MudAlert>
+    }
+</MudContainer>
+
+
+
+
+
+@code {
+    private List<RoomDto>? rooms;
+    private Guid selectedRoomId;
+    private DateTime? startDate;
+    private DateTime? endDate;
+    private string? message;
+    private Severity severity = Severity.Success;
+
+    protected override async Task OnInitializedAsync()
+    {
+        rooms = await Http.GetFromJsonAsync<List<RoomDto>>("api/rooms");
+    }
+    private async Task BookRoom(){
+        if(startDate == null || endDate == null)
+        {
+            message = "Please select reservation dates.";
+            severity = Severity.Warning;
+            return;
+        }
+        var request = new CreateBookingRequest
+        {
+            RoomId = selectedRoomId,
+            UserId = Guid.NewGuid(), // temporary
+            Start = DateOnly.FromDateTime(startDate.Value),
+            End = DateOnly.FromDateTime(endDate.Value)
+        };
+        var response = await Http.PostAsJsonAsync("api/bookings", request);
+
+        if(response.IsSuccessStatusCode)
+        {
+            message = "Booking successful! ✅";
+            severity = Severity.Success;
+        }
+        else
+        {
+            message = "Booking failed. The room might be occupied.";
+            severity = Severity.Error;
+        }
+
+
+
+    }
+
+}

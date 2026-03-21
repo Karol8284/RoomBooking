@@ -1,0 +1,39 @@
+﻿@page "/room"
+@inject HttpClient Http
+@using RoomBooking.Shared.DTOs.Rooms
+
+<MudText Typo="Typo.h4" Class="mb-4">Room</MudText>
+
+@if(rooms == null)
+{
+    <MudProgressCircular Indeterminate="true" />
+}
+else
+{
+    <MudGrid>
+        @foreach (var room in rooms)
+        {
+            <MudItem xs="12" sm="6" md="4" lg="3">
+                <MudCard>
+                    <MudCardContent>
+                        <MudText Typo="Typo.h6">@room.Name</MudText>
+                        <MudText>@room.Description</MudText>
+                        <MudText Color="Color.Primary">@room.Price PLN / night</MudText>
+                        <MudText>@room.Location</MudText>
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+        }
+    </MudGrid>
+
+}
+
+
+@code {
+    private List<RoomDto>? rooms;
+    protected override async Task OnInitializedAsync()
+    {
+        rooms = await Http.GetFromJsonAsync<List<RoomDto>>("api/rooms");
+    }
+}
+    

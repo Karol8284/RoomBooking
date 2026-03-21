@@ -1,7 +1,26 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
-
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
+<MudContainer MaxWidth="MaxWidth.Medium" Class="mt-8">
+    <MudText Typo="Typo.h3" Align="Align.Center" GutterBottom="true">
+        🏨 RoomBooking System 
+        @* Icon From Internet *@
+    </MudText>
+    <MudText Typo="Typo.subtitle1" Align="Align.Center" Class="mb-6" Color="Color.Secondary">
+        Room Reservation system Cleann Architecture .NET ;)
+    </MudText>
+    <MudDivider Class="mb-6" />
+    <MudGrid Justify="Justify.Center">
+        <MudItem xs="12" sm="6">
+            <MudButton Variant="Variant.Filled" Color="Color.Primary"
+            Href="/room" FullWidth="true" Size="Size.Large">
+            See Rooms
+        </MudButton>
+        </MudItem>
+        <MudItem xs="12" sm="6">
+            <MudButton Variant="Variant.Outlined" Color="Color.Primary"
+            Href="/booking" FullWidth="true" Size="Size.Large">
+            My Reservation
+        </MudButton>
+        </MudItem>
+    </MudGrid>
+</MudContainer>

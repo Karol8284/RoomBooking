@@ -65,6 +65,5 @@ namespace RoomBooking.API.Controllers
             await _roomRepository.DeleteAsync(id);
             return NoContent();
         }
-
     }
 }
