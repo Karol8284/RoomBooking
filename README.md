@@ -1,19 +1,4 @@
-# Projekt w budowie planowanje skończyć w 2026 roku
-# RoomBooking
-System zarządzania rezerwacjami pokoi. <br>
-Architektura: Clean Architecture + .NET Aspire <br>
-Stack: ASP.NET Core 9, MAUI Blazor Hybrid, Blazor WASM, EF Core <br>
-Database: Postgress <br>
-
 # RoomBooking System
-> Room reservation system built with: 
-> NET 9> PostgreSQL
-> ASP.NET
-> PostgreSQL
-> WebAssembly
-> ConnectionStrings
-> RoomBooking.API
-> PostgreSQL
 
 ![.NET](https://img.shields.io/badge/.NET-9.0-purple)
 ![EF Core](https://img.shields.io/badge/EF%20Core-9.0-blue)
@@ -30,11 +15,12 @@ Clean Architecture with 4 layers:
 - **WebAssembly** - Blazor WASM + MudBlazor UI 
 
 ## Tech Stack
+
 - .NET 9 / C# 13
-- ASP>NET Core Web API
+- ASP.NET Core Web API
 - Entity Framework Core 9
-- PosrgreSql (Npgsql)
-- Blazor WebAsembly
+- PostgreSQL (Npgsql)
+- Blazor WebAssembly
 - MudBlazor
 - .NET Aspire
 - Scalar (OpenAPI)
@@ -43,7 +29,7 @@ Clean Architecture with 4 layers:
 
 ### Prerequisites
 - .NET 9 SDK
-- 0 PostgreSql 16+
+- PostgreSql 16+
 
 ### Setup
 1. Clone the repo
@@ -53,7 +39,7 @@ Clean Architecture with 4 layers:
 2. Configure connection string in Infrastructure User Secrets:
 ```json
   {
-  "ConnectionSttrings":{
+  "ConnectionStrings":{
       "DefaultConnection": "Host=localhost;Database=RoomBooking;Username=postgres;Password=yourpassword"
      }
   }
@@ -84,7 +70,7 @@ Clean Architecture with 4 layers:
 | POST | /api/rooms | Create room |
 | PUT | /api/rooms/{id} | Update room | 
 | DELETE | /api/room/{id} | Delete room |
-| POST | /api/bookings/{id} | Book a room |
+| POST | /api/bookings | Book a room |
 | DELETE | /api/bookings/{id} | Cancel booking |
 | GET | /api/bookings/user/{userId} | Get user bookings | 
 
