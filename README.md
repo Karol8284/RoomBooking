@@ -8,7 +8,7 @@ Database: Postgress <br>
 # RoomBooking System
 > Room reservation system built with
 > Clean Architecture,
-> .NTE 10,
+> .NTE 9,
 > Blazor WebAssembly and
 > ProgresSql.
 
