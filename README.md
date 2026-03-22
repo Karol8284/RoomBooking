@@ -86,4 +86,4 @@ Clean Architecture with 4 layers:
 | GET | /api/bookings/user/{userId} | Get user bookings | 
 
 ## Autor 
-Karol Małęcki - [LinkedIn](https://linkedin.com/in/karol-małecki-46bb80254) | [GitHub](https://github.com/Karol-Malecki-dev)
+Karol Małecki - [LinkedIn](https://linkedin.com/in/karol-małecki-46bb80254) | [GitHub](https://github.com/Karol-Malecki-dev)
