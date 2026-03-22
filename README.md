@@ -52,7 +52,7 @@ Clean Architecture with 4 layers:
 
 4. Run the API:
 ```bash
-  cd RoomBoking.API
+  cd RoomBooking.API
   dotnet run
 ```
 
@@ -69,7 +69,7 @@ Clean Architecture with 4 layers:
 | GET | /api/rooms/{id} | Get room by ID |
 | POST | /api/rooms | Create room |
 | PUT | /api/rooms/{id} | Update room | 
-| DELETE | /api/room/{id} | Delete room |
+| DELETE | /api/rooms/{id} | Delete room |
 | POST | /api/bookings | Book a room |
 | DELETE | /api/bookings/{id} | Cancel booking |
 | GET | /api/bookings/user/{userId} | Get user bookings | 
