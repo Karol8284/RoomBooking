@@ -21,7 +21,7 @@ Database: Postgress <br>
 
 ## Architecture
 Clean Architecture with 4 layers:
-- ** CORE** - domain entities, interface, business logic
-- ** Infrastructure ** - EF Core, PostgreSql, repositories
-- ** API ** - ASP>NET Core Web API, Scalar
-- - ** WebAssembly ** - Blazor WASM + MudBlazor UI 
+- **CORE** - domain entities, interface, business logic
+- **Infrastructure** - EF Core, PostgreSql, repositories
+- **API** - ASP>NET Core Web API, Scalar
+- **WebAssembly** - Blazor WASM + MudBlazor UI 
