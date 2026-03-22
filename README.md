@@ -75,5 +75,5 @@ Clean Architecture with 4 layers:
 
 ## API Endpoints
 | Method | Endpoint | Description |
-| ------ | -------- | - |
+| ------ | -------- |-|
 | GET | /api/rooms | Get all rooms |
