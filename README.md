@@ -6,11 +6,14 @@ Stack: ASP.NET Core 9, MAUI Blazor Hybrid, Blazor WASM, EF Core <br>
 Database: Postgress <br>
 
 # RoomBooking System
-> Room reservation system built with
-> Clean Architecture,
-> .NTE 9,
-> Blazor WebAssembly and
-> ProgresSql.
+> Room reservation system built with: 
+> NET 9> PostgreSQL
+> ASP.NET
+> PostgreSQL
+> WebAssembly
+> ConnectionStrings
+> RoomBooking.API
+> PostgreSQL
 
 ![.NET](https://img.shields.io/badge/.NET-9.0-purple)
 ![EF Core](https://img.shields.io/badge/EF%20Core-9.0-blue)
