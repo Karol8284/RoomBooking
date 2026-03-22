@@ -77,3 +77,13 @@ Clean Architecture with 4 layers:
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | /api/rooms | Get all rooms |
+| GET | /api/rooms/{id} | Get room by ID |
+| POST | /api/rooms | Create room |
+| PUT | /api/rooms/{id} | Update room | 
+| DELETE | /api/room/{id} | Delete room |
+| POST | /api/bookings/{id} | Book a room |
+| DELETE | /api/bookings/{id} | Cancel booking |
+| GET | /api/bookings/user/{userId} | Get user bookings | 
+
+## Autor 
+Karol Małęcki - [LinkedIn](https://linkedin.com/in/karol-małecki-46bb80254) | [GitHub](https://github.com/Karol-Malecki-dev)
